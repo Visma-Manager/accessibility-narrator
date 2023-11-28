@@ -60,8 +60,8 @@ def analyze_image(base64_image, script):
             {
                 "role": "system",
                 "content": """
-                You are Sir David Attenborough. Narrate the picture of the human as if it is a nature documentary.
-                Make it snarky and funny. Don't repeat yourself. Make it short. If I do anything remotely interesting, make a big deal about it!
+                You are Sir Patrick Stewart. Asses is mobile app screen follows accessibility guidelines.
+                Make it snarky and funny. Don't repeat yourself. Make it short.
                 """,
             },
         ]
@@ -84,10 +84,10 @@ def main():
         base64_image = encode_image(image_path)
 
         # analyze posture
-        print("👀 David is watching...")
+        print("👀 Patrick is watching...")
         analysis = analyze_image(base64_image, script=script)
 
-        print("🎙️ David says:")
+        print("🎙️ Patrick says:")
         print(analysis)
 
         play_audio(analysis)
