@@ -7,5 +7,6 @@ import time
 while True:
     subprocess.Popen("adb exec-out screencap -p > ./frames/screenshot.png", shell=True)
 
-    # Wait for 2 seconds
-    time.sleep(2)
+    print("📸Saving frame.")
+    # Wait for 5 seconds
+    time.sleep(5)

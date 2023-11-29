@@ -60,8 +60,7 @@ def analyze_image(base64_image, script):
             {
                 "role": "system",
                 "content": """
-                You are Sir Patrick Stewart. Asses is mobile app screen follows accessibility guidelines.
-                Make it snarky and funny. Don't repeat yourself. Make it short.
+                Using Web Content Accessibility Guidelines 2.0 as a reference analyse the image, give a short bullet point list of improvements or suggestions. Be specific about the elements on screen and do not give generic tips on Accessibility  unless it actually relates to a specific area on the image
                 """,
             },
         ]
@@ -78,13 +77,14 @@ def main():
 
     while True:
         # path to your image
-        image_path = os.path.join(os.getcwd(), "./frames/frame.jpg")
+        # image_path = os.path.join(os.getcwd(), "./frames/frame.jpg")
+        image_path = os.path.join(os.getcwd(), "./frames/screenshot.png")
 
         # getting the base64 encoding
         base64_image = encode_image(image_path)
 
         # analyze posture
-        print("👀 Patrick is watching...")
+        print("👀 Patrick is scanning the image...")
         analysis = analyze_image(base64_image, script=script)
 
         print("🎙️ Patrick says:")
